@@ -1,0 +1,51 @@
+﻿<Window x:Class="ContractMonthlyClaimSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ContractMonthlyClaimSystem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10" Background="#FFE6D6D8">
+        <TabControl>
+            <!-- Lecturer Tab -->
+            <TabItem Header="Lecturer" FontSize="14" >
+                <StackPanel Margin="20" Background="#FFE6D6D8">
+                    <TextBlock Text="Submit Document / Claim" 
+                               FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBox Width="400" Height="100" Text="Enter claim details here..." FontSize="18"/>
+                    <Button Content="Submit" Width="100" Margin="0,10,0,0" Background="#FF7D7878"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Programme Coordinator Tab -->
+            <TabItem Header="Programme Coordinator" FontSize="14">
+                <StackPanel Margin="20" Background="#FFE6D6D8">
+                    <TextBlock Text="Review Lecturer Submissions" 
+                               FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <ListBox Width="400" Height="150">
+                        <ListBoxItem>Document 1 - Pending</ListBoxItem>
+                        <ListBoxItem>Document 2 - Pending</ListBoxItem>
+                    </ListBox>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0" >
+                        <Button Content="Approve" Width="100" Margin="0,0,10,0" Background="#FF7D7878"/>
+                        <Button Content="Reject" Width="100" Background="#FF7D7878"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Academic Manager Tab -->
+            <TabItem Header="Academic Manager" FontSize="14">
+                <StackPanel Margin="20" Background="#FFE6D6D8">
+                    <TextBlock Text="Final Approval " 
+                               FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <ListBox Width="400" Height="150">
+                        <ListBoxItem>Report 1 - Ready</ListBoxItem>
+                        <ListBoxItem>Report 2 - Ready</ListBoxItem>
+                    </ListBox>
+                    <Button Content="Generate Report" Width="150" Margin="0,10,0,0"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
